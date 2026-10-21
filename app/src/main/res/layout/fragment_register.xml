@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6F4">
+
+    <!-- Background Image with Gradient Overlay -->
+    <ImageView
+        android:id="@+id/imgCampusReg"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plmun_building" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@id/imgCampusReg"
+        android:background="@drawable/bg_image_overlay" />
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:id="@+id/headerContentReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/plmun_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="PLMUN"
+            android:textColor="#11470B"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Registration Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textColor="#063A18"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <!-- Full Name Input -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_input_field"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="8dp"
+                android:hint="Full Name"
+                android:paddingHorizontal="10dp"
+                android:textColor="#212121"
+                android:textColorHint="#9E9E9E"
+                android:textSize="13sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- ID/Email Input -->
+            <EditText
+                android:id="@+id/etRegId"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_input_field"
+                android:drawableStart="@drawable/ic_mail"
+                android:drawablePadding="8dp"
+                android:hint="Student/Faculty ID"
+                android:paddingHorizontal="10dp"
+                android:textColor="#212121"
+                android:textColorHint="#9E9E9E"
+                android:textSize="13sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- Password Input -->
+            <EditText
+                android:id="@+id/etRegPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_input_field"
+                android:drawableStart="@android:drawable/ic_secure"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingHorizontal="10dp"
+                android:textColor="#212121"
+                android:textColorHint="#9E9E9E"
+                android:textSize="13sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/btnSubmitRegister"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:backgroundTint="#063A18"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="21dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <!-- Back to Login Text -->
+            <TextView
+                android:id="@+id/tvBackToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Already have an account? Log In"
+                android:textColor="#063A18"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
