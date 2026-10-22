@@ -79,7 +79,7 @@
             <EditText
                 android:id="@+id/etFullName"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:background="@drawable/bg_input_field"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="8dp"
@@ -97,7 +97,7 @@
             <EditText
                 android:id="@+id/etRegId"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:background="@drawable/bg_input_field"
                 android:drawableStart="@drawable/ic_mail"
                 android:drawablePadding="8dp"
@@ -115,7 +115,7 @@
             <EditText
                 android:id="@+id/etRegPassword"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:background="@drawable/bg_input_field"
                 android:drawableStart="@android:drawable/ic_secure"
                 android:drawablePadding="8dp"
@@ -134,7 +134,7 @@
             <Button
                 android:id="@+id/btnSubmitRegister"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="48dp"
                 android:backgroundTint="#063A18"
                 android:text="Sign Up"
                 android:textAllCaps="false"

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_welcome);
 
-        // Bind UI Components
+
         btnTabStudent = findViewById(R.id.btnTabStudent);
         btnTabFaculty = findViewById(R.id.btnTabFaculty);
         tvLoginTitle = findViewById(R.id.tvLoginTitle);
@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         btnCreateAccount = findViewById(R.id.btnCreateAccount);
 
-        // Set Student Tab as Active by default
+
         setTabActive(true);
 
-        // Tab Click Handlers with smooth fade/slide transition
+
         btnTabStudent.setOnClickListener(v -> {
             if (!btnTabStudent.isSelected()) {
                 animateTabSwitch(true);
@@ -44,10 +44,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Open Registration Screen with Fragment Animation
+
+        btnLogin.setOnClickListener(v -> {
+            getSupportFragmentManager().beginTransaction()
+
+                    .setCustomAnimations(
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out,
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out
+                    )
+                    .replace(android.R.id.content, new StudentDashboardFragment())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+
         btnCreateAccount.setOnClickListener(v -> {
             getSupportFragmentManager().beginTransaction()
-                    // Add smooth fade animations for fragment transition
+
                     .setCustomAnimations(
                             android.R.anim.fade_in,
                             android.R.anim.fade_out,
@@ -61,9 +76,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void animateTabSwitch(boolean isStudent) {
-
         setTabActive(isStudent);
-
 
         tvLoginTitle.setTranslationY(20f);
         tvLoginTitle.setAlpha(0f);
@@ -75,10 +88,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setTabActive(boolean isStudent) {
-
         btnTabStudent.setSelected(isStudent);
         btnTabFaculty.setSelected(!isStudent);
-
 
         if (isStudent) {
             tvLoginTitle.setText("Student Login");

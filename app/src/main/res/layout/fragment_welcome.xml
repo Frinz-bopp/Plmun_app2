@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F4F6F4">
 
-    <!-- 1. Large Campus Background Image -->
+
     <ImageView
         android:id="@+id/imgCampus"
         android:layout_width="match_parent"
@@ -13,14 +13,14 @@
         android:scaleType="centerCrop"
         android:src="@drawable/plmun_building" />
 
-    <!-- 2. Gradient Overlay (Blends image seamlessly into background) -->
+
     <View
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignBottom="@id/imgCampus"
         android:background="@drawable/bg_image_overlay" />
 
-    <!-- 3. Top Header Bar (Logo + Title) -->
+
     <LinearLayout
         android:id="@+id/headerContent"
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- 4. Compact White Card -->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="12dp" />
 
-            <!-- Tab Switcher -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
@@ -119,12 +119,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="12dp" />
 
-            <!-- Student ID -->
-            <!-- Student / Faculty ID Input -->
+
             <EditText
                 android:id="@+id/etId"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:background="@drawable/bg_input_field"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="10dp"
@@ -138,11 +137,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="8dp" />
 
-            <!-- Password Input -->
+
             <EditText
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:background="@drawable/bg_input_field"
                 android:drawableStart="@android:drawable/ic_secure"
                 android:drawablePadding="10dp"
@@ -157,11 +156,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="12dp" />
 
-            <!-- Log In Button -->
+
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="48dp"
                 android:backgroundTint="#063A18"
                 android:text="Log In"
                 android:textAllCaps="false"
@@ -174,11 +173,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="8dp" />
 
-            <!-- Create Account Button -->
+
             <Button
                 android:id="@+id/btnCreateAccount"
                 android:layout_width="match_parent"
-                android:layout_height="42dp"
+                android:layout_height="48dp"
                 android:backgroundTint="#FFFFFF"
                 android:text="Create Account"
                 android:textAllCaps="false"

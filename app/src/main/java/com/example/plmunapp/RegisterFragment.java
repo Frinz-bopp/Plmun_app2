@@ -32,7 +32,7 @@ public class RegisterFragment extends Fragment {
 
         btnSubmitRegister.setOnClickListener(v -> handleRegistration());
 
-        // Return back to Login screen
+
         tvBackToLogin.setOnClickListener(v -> {
             if (getActivity() != null) {
                 getActivity().getSupportFragmentManager().popBackStack();
