@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#F4F6F4">
 
-    <!-- Background Image with Gradient Overlay -->
+
     <ImageView
         android:id="@+id/imgCampusReg"
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
         android:layout_alignBottom="@id/imgCampusReg"
         android:background="@drawable/bg_image_overlay" />
 
-    <!-- Top Header Bar -->
+
     <LinearLayout
         android:id="@+id/headerContentReg"
         android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Registration Card -->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="12dp" />
 
-            <!-- Full Name Input -->
+
             <EditText
                 android:id="@+id/etFullName"
                 android:layout_width="match_parent"
@@ -93,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="8dp" />
 
-            <!-- ID/Email Input -->
+
             <EditText
                 android:id="@+id/etRegId"
                 android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="8dp" />
 
-            <!-- Password Input -->
+
             <EditText
                 android:id="@+id/etRegPassword"
                 android:layout_width="match_parent"
@@ -130,7 +130,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="12dp" />
 
-            <!-- Register Button -->
+
             <Button
                 android:id="@+id/btnSubmitRegister"
                 android:layout_width="match_parent"
@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="8dp" />
 
-            <!-- Back to Login Text -->
+
             <TextView
                 android:id="@+id/tvBackToLogin"
                 android:layout_width="wrap_content"

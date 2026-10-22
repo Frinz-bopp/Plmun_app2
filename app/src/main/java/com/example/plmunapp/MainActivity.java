@@ -49,10 +49,10 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     // Add smooth fade animations for fragment transition
                     .setCustomAnimations(
-                            android.R.anim.fade_in,  // Enter animation
-                            android.R.anim.fade_out, // Exit animation
-                            android.R.anim.fade_in,  // Pop enter animation (when pressing back)
-                            android.R.anim.fade_out  // Pop exit animation
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out,
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out
                     )
                     .replace(android.R.id.content, new RegisterFragment())
                     .addToBackStack(null)
@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void animateTabSwitch(boolean isStudent) {
-        // Apply state changes immediately
+
         setTabActive(isStudent);
 
-        // Add a smooth fade and translation effect to the form elements
+
         tvLoginTitle.setTranslationY(20f);
         tvLoginTitle.setAlpha(0f);
         tvLoginTitle.animate().translationY(0f).alpha(1f).setDuration(250).start();
@@ -75,11 +75,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setTabActive(boolean isStudent) {
-        // Toggle active selection states
+
         btnTabStudent.setSelected(isStudent);
         btnTabFaculty.setSelected(!isStudent);
 
-        // Update title and input field hint dynamically
+
         if (isStudent) {
             tvLoginTitle.setText("Student Login");
             etId.setHint("Student ID");
