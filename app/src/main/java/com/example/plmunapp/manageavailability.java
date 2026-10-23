@@ -28,7 +28,6 @@ public class manageavailability extends Fragment {
 
     }
 
-
     public static manageavailability newInstance(String param1, String param2) {
         manageavailability fragment = new manageavailability();
         Bundle args = new Bundle();

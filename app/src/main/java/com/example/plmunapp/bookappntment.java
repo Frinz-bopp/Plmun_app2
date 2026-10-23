@@ -23,7 +23,6 @@ public class bookappntment extends Fragment {
 
     }
 
-
     public static bookappntment newInstance(String param1, String param2) {
         bookappntment fragment = new bookappntment();
         Bundle args = new Bundle();

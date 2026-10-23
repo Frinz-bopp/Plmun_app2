@@ -37,7 +37,7 @@ public class SearchFacultyFragment extends Fragment {
                     .commit();
         };
 
-        // Attach click listeners to each included faculty item layout container
+
         View faculty1 = view.findViewById(R.id.faculty1);
         View faculty2 = view.findViewById(R.id.faculty2);
         View faculty3 = view.findViewById(R.id.faculty3);
