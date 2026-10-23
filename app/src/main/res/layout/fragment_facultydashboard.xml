@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#063A18">
 
-    <!-- TOP HEADER -->
     <LinearLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
@@ -98,7 +97,6 @@
             android:textSize="13sp" />
     </LinearLayout>
 
-    <!-- MAIN ROUNDED CONTENT SHEET -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -122,14 +120,12 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- GRID SECTION (2x2) -->
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:columnCount="2"
                     android:rowCount="2">
 
-                    <!-- Card 1: Manage Availability -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardManageAvailability"
                         android:layout_width="0dp"
@@ -170,7 +166,6 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Card 2: Appointment Manager -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardAppointmentManager"
                         android:layout_width="0dp"
@@ -211,7 +206,6 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Card 3: Schedule -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardSchedule"
                         android:layout_width="0dp"
@@ -251,7 +245,6 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Card 4: Profile & Notifications -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardProfileNotifications"
                         android:layout_width="0dp"
@@ -297,7 +290,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="12dp" />
 
-                <!-- BOTTOM BANNER CARD -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="125dp"
@@ -361,7 +353,6 @@
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
-    <!-- BOTTOM NAVIGATION BAR (4 TABS: Home, Appointments, Schedule, Profile) -->
     <LinearLayout
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
@@ -371,7 +362,6 @@
         android:elevation="8dp"
         android:orientation="horizontal">
 
-        <!-- 1. Home (Active) -->
         <LinearLayout
             android:id="@+id/navHome"
             android:layout_width="0dp"
@@ -399,7 +389,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- 2. Appointments -->
         <LinearLayout
             android:id="@+id/navAppointments"
             android:layout_width="0dp"
@@ -426,7 +415,6 @@
                 android:textSize="11sp" />
         </LinearLayout>
 
-        <!-- 3. Schedule -->
         <LinearLayout
             android:id="@+id/navSchedule"
             android:layout_width="0dp"
@@ -453,7 +441,6 @@
                 android:textSize="11sp" />
         </LinearLayout>
 
-        <!-- 4. Profile -->
         <LinearLayout
             android:id="@+id/navProfile"
             android:layout_width="0dp"

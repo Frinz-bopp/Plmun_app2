@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#063A18">
 
-    <!-- TOP HEADER -->
     <LinearLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
@@ -37,7 +36,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- MAIN ROUNDED CONTENT SHEET -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +48,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- SCROLLABLE BODY -->
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -65,7 +62,6 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- 1. SET YOUR AVAILABILITY SWITCH CARD -->
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -101,122 +97,119 @@
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- 2. AVAILABLE DAYS SECTION -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
                         android:text="Available Days"
                         android:textColor="#212121"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="12dp" />
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginBottom="24dp">
+                        android:layout_marginBottom="24dp"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/chkMonday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="true"
+                            android:paddingStart="8dp"
                             android:text="Monday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
 
                         <CheckBox
                             android:id="@+id/chkTuesday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="true"
+                            android:paddingStart="8dp"
                             android:text="Tuesday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
 
                         <CheckBox
                             android:id="@+id/chkWednesday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="true"
+                            android:paddingStart="8dp"
                             android:text="Wednesday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
 
                         <CheckBox
                             android:id="@+id/chkThursday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="true"
+                            android:paddingStart="8dp"
                             android:text="Thursday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
 
                         <CheckBox
                             android:id="@+id/chkFriday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="true"
+                            android:paddingStart="8dp"
                             android:text="Friday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
 
                         <CheckBox
                             android:id="@+id/chkSaturday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="false"
+                            android:paddingStart="8dp"
                             android:text="Saturday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
 
                         <CheckBox
                             android:id="@+id/chkSunday"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:buttonTint="#063A18"
                             android:checked="false"
+                            android:paddingStart="8dp"
                             android:text="Sunday"
                             android:textColor="#212121"
-                            android:textSize="14sp"
-                            android:buttonTint="#063A18"
-                            android:paddingStart="8dp" />
+                            android:textSize="14sp" />
                     </LinearLayout>
 
-                    <!-- 3. TIME SLOTS SECTION -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
                         android:text="Time Slots"
                         android:textColor="#212121"
                         android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="12dp" />
+                        android:textStyle="bold" />
 
-                    <!-- Row 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="10dp">
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="44dp"
-                            android:layout_weight="1"
                             android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/bg_card_selected"
                             android:clickable="true"
                             android:focusable="true"
@@ -229,8 +222,8 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="44dp"
-                            android:layout_weight="1"
                             android:layout_marginStart="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/bg_card_selected"
                             android:clickable="true"
                             android:focusable="true"
@@ -241,18 +234,17 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Row 2 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="20dp">
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="44dp"
-                            android:layout_weight="1"
                             android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/bg_card_unselected"
                             android:clickable="true"
                             android:focusable="true"
@@ -264,8 +256,8 @@
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="44dp"
-                            android:layout_weight="1"
                             android:layout_marginStart="8dp"
+                            android:layout_weight="1"
                             android:background="@drawable/bg_card_unselected"
                             android:clickable="true"
                             android:focusable="true"
@@ -278,7 +270,6 @@
                 </LinearLayout>
             </ScrollView>
 
-            <!-- FLOATING SAVE CHANGES BUTTON CONTAINER -->
             <LinearLayout
                 android:id="@+id/bottomActionContainer"
                 android:layout_width="match_parent"

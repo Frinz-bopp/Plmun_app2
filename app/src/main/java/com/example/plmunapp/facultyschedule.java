@@ -25,7 +25,7 @@ public class facultyschedule extends Fragment {
     private String mParam2;
 
     public facultyschedule() {
-        // Required empty public constructor
+
     }
 
     /**

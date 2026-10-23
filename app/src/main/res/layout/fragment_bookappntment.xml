@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#063A18">
 
-    <!-- TOP HEADER -->
+
     <LinearLayout
         android:id="@+id/headerBookAppointment"
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- MAIN ROUNDED CONTENT SHEET -->
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- SCROLLABLE BODY CONTENT -->
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -64,7 +64,7 @@
                     android:orientation="vertical"
                     android:padding="16dp">
 
-                    <!-- 1. PROFILE BANNER CARD -->
+
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="110dp"
@@ -121,7 +121,7 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- 2. SELECT DATE SECTION -->
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <!-- Apr 25 (Selected) -->
+
                             <LinearLayout
                                 android:layout_width="60dp"
                                 android:layout_height="75dp"
@@ -156,25 +156,25 @@
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fri" android:textColor="#FFFFFF" android:textSize="12sp"/>
                             </LinearLayout>
 
-                            <!-- Apr 26 -->
+
                             <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 26" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sat" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
 
-                            <!-- Apr 27 -->
+
                             <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 27" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sun" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
 
-                            <!-- Apr 28 -->
+
                             <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 28" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
 
-                            <!-- Apr 29 -->
+
                             <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 29" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tue" android:textColor="#666666" android:textSize="12sp"/>
@@ -268,7 +268,7 @@
                 </LinearLayout>
             </ScrollView>
 
-            <!-- 5. FLOATING BOTTOM ACTION CONTAINER -->
+
             <LinearLayout
                 android:id="@+id/bottomActionContainer"
                 android:layout_width="match_parent"

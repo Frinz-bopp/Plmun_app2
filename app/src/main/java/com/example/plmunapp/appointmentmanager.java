@@ -1,58 +1,27 @@
 package com.example.plmunapp;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link appointmentmanager#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 public class appointmentmanager extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Button btnTabUpcoming, btnTabPast;
 
     public appointmentmanager() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment appointmentmanager.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static appointmentmanager newInstance(String param1, String param2) {
-        appointmentmanager fragment = new appointmentmanager();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    public static appointmentmanager newInstance() {
+        return new appointmentmanager();
     }
 
     @Override
@@ -60,5 +29,64 @@ public class appointmentmanager extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_appointmentmanager, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        btnTabUpcoming = view.findViewById(R.id.btnTabUpcoming);
+        btnTabPast = view.findViewById(R.id.btnTabPast);
+
+        if (btnTabUpcoming != null && btnTabPast != null) {
+            btnTabUpcoming.setOnClickListener(v -> {
+
+                btnTabUpcoming.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF063A18));
+                btnTabUpcoming.setTextColor(0xFFFFFFFF);
+
+                btnTabPast.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.TRANSPARENT));
+                btnTabPast.setTextColor(0xFF666666);
+            });
+
+            btnTabPast.setOnClickListener(v -> {
+
+                btnTabPast.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF063A18));
+                btnTabPast.setTextColor(0xFFFFFFFF);
+
+                btnTabUpcoming.setBackgroundTintList(android.content.res.ColorStateList.valueOf(android.graphics.Color.TRANSPARENT));
+                btnTabUpcoming.setTextColor(0xFF666666);
+            });
+        }
+
+
+        View btnBack = view.findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(v -> {
+                if (getActivity() != null) {
+                    getActivity().onBackPressed();
+                }
+            });
+        }
+
+
+        LinearLayout navHome = view.findViewById(R.id.navHome);
+        if (navHome != null) {
+            navHome.setOnClickListener(v -> {
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new facultydashboard())
+                        .addToBackStack(null)
+                        .commit();
+            });
+        }
+
+
+        LinearLayout navProfile = view.findViewById(R.id.navProfile);
+        if (navProfile != null) {
+            navProfile.setOnClickListener(v -> {
+                Toast.makeText(requireContext(), "Profile clicked", Toast.LENGTH_SHORT).show();
+            });
+        }
     }
 }
