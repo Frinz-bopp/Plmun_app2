@@ -1,49 +1,78 @@
 package com.example.plmunapp;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 public class facultydashboard extends Fragment {
 
-
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-
-    private String mParam1;
-    private String mParam2;
+    private CardView cardAppointmentManager, cardSchedule;
+    private View navAppointments, navSchedule;
 
     public facultydashboard() {
-
     }
 
-    public static facultydashboard newInstance(String param1, String param2) {
-        facultydashboard fragment = new facultydashboard();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static facultydashboard newInstance() {
+        return new facultydashboard();
     }
 
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_facultydashboard, container, false);
+
+        cardAppointmentManager = view.findViewById(R.id.cardAppointmentManager);
+        cardSchedule = view.findViewById(R.id.cardSchedule);
+        navAppointments = view.findViewById(R.id.navAppointments);
+        navSchedule = view.findViewById(R.id.navSchedule);
+
+        View.OnClickListener openAppointmentManager = v -> {
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out,
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out
+                    )
+                    .replace(android.R.id.content, new appointmentmanager())
+                    .addToBackStack(null)
+                    .commit();
+        };
+
+        View.OnClickListener openSchedule = v -> {
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out,
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out
+                    )
+                    .replace(android.R.id.content, new facultyschedule())
+                    .addToBackStack(null)
+                    .commit();
+        };
+
+        if (cardAppointmentManager != null) {
+            cardAppointmentManager.setOnClickListener(openAppointmentManager);
         }
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_facultydashboard, container, false);
+        if (navAppointments != null) {
+            navAppointments.setOnClickListener(openAppointmentManager);
+        }
+
+        if (cardSchedule != null) {
+            cardSchedule.setOnClickListener(openSchedule);
+        }
+
+        if (navSchedule != null) {
+            navSchedule.setOnClickListener(openSchedule);
+        }
+
+        return view;
     }
 }

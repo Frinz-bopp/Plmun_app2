@@ -17,7 +17,6 @@ public class appointmentmanager extends Fragment {
     private Button btnTabUpcoming, btnTabPast;
 
     public appointmentmanager() {
-        // Required empty public constructor
     }
 
     public static appointmentmanager newInstance() {
@@ -27,7 +26,6 @@ public class appointmentmanager extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_appointmentmanager, container, false);
     }
 
@@ -35,13 +33,11 @@ public class appointmentmanager extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         btnTabUpcoming = view.findViewById(R.id.btnTabUpcoming);
         btnTabPast = view.findViewById(R.id.btnTabPast);
 
         if (btnTabUpcoming != null && btnTabPast != null) {
             btnTabUpcoming.setOnClickListener(v -> {
-
                 btnTabUpcoming.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF063A18));
                 btnTabUpcoming.setTextColor(0xFFFFFFFF);
 
@@ -50,7 +46,6 @@ public class appointmentmanager extends Fragment {
             });
 
             btnTabPast.setOnClickListener(v -> {
-
                 btnTabPast.setBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFF063A18));
                 btnTabPast.setTextColor(0xFFFFFFFF);
 
@@ -58,7 +53,6 @@ public class appointmentmanager extends Fragment {
                 btnTabUpcoming.setTextColor(0xFF666666);
             });
         }
-
 
         View btnBack = view.findViewById(R.id.btnBack);
         if (btnBack != null) {
@@ -69,18 +63,39 @@ public class appointmentmanager extends Fragment {
             });
         }
 
-
         LinearLayout navHome = view.findViewById(R.id.navHome);
         if (navHome != null) {
             navHome.setOnClickListener(v -> {
                 requireActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container, new facultydashboard())
+                        .setCustomAnimations(
+                                android.R.anim.fade_in,
+                                android.R.anim.fade_out,
+                                android.R.anim.fade_in,
+                                android.R.anim.fade_out
+                        )
+                        .replace(android.R.id.content, new facultydashboard())
                         .addToBackStack(null)
                         .commit();
             });
         }
 
+        LinearLayout navSchedule = view.findViewById(R.id.navSchedule);
+        if (navSchedule != null) {
+            navSchedule.setOnClickListener(v -> {
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(
+                                android.R.anim.fade_in,
+                                android.R.anim.fade_out,
+                                android.R.anim.fade_in,
+                                android.R.anim.fade_out
+                        )
+                        .replace(android.R.id.content, new facultyschedule())
+                        .addToBackStack(null)
+                        .commit();
+            });
+        }
 
         LinearLayout navProfile = view.findViewById(R.id.navProfile);
         if (navProfile != null) {

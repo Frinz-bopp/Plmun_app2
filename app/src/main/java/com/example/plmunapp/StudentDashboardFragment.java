@@ -24,12 +24,10 @@ public class StudentDashboardFragment extends Fragment {
         cardBookAppointment = view.findViewById(R.id.cardBookAppointment);
         cardNotifications = view.findViewById(R.id.cardNotifications);
 
-
         applyPressEffect(cardSearchFaculty);
         applyPressEffect(cardMyAppointments);
         applyPressEffect(cardBookAppointment);
         applyPressEffect(cardNotifications);
-
 
         cardSearchFaculty.setOnClickListener(v -> {
             requireActivity().getSupportFragmentManager().beginTransaction()
@@ -44,19 +42,24 @@ public class StudentDashboardFragment extends Fragment {
                     .commit();
         });
 
-
         cardMyAppointments.setOnClickListener(v -> {
-
         });
 
 
         cardBookAppointment.setOnClickListener(v -> {
-
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out,
+                            android.R.anim.fade_in,
+                            android.R.anim.fade_out
+                    )
+                    .replace(android.R.id.content, new bookappntment())
+                    .addToBackStack(null)
+                    .commit();
         });
 
-
         cardNotifications.setOnClickListener(v -> {
-
         });
 
         return view;

@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#063A18">
 
-
     <LinearLayout
         android:id="@+id/headerBookAppointment"
         android:layout_width="match_parent"
@@ -36,7 +35,6 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +48,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -63,7 +60,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="16dp">
-
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
@@ -121,7 +117,6 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -142,8 +137,8 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-
                             <LinearLayout
+                                android:id="@+id/date1"
                                 android:layout_width="60dp"
                                 android:layout_height="75dp"
                                 android:layout_marginEnd="8dp"
@@ -156,26 +151,58 @@
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fri" android:textColor="#FFFFFF" android:textSize="12sp"/>
                             </LinearLayout>
 
-
-                            <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/date2"
+                                android:layout_width="60dp"
+                                android:layout_height="75dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_card_unselected"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 26" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sat" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
 
-
-                            <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/date3"
+                                android:layout_width="60dp"
+                                android:layout_height="75dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_card_unselected"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 27" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sun" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
 
-
-                            <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/date4"
+                                android:layout_width="60dp"
+                                android:layout_height="75dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_card_unselected"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 28" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mon" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
 
-
-                            <LinearLayout android:layout_width="60dp" android:layout_height="75dp" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:orientation="vertical">
+                            <LinearLayout
+                                android:id="@+id/date5"
+                                android:layout_width="60dp"
+                                android:layout_height="75dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/bg_card_unselected"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:gravity="center"
+                                android:orientation="vertical">
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Apr 29" android:textColor="#333333" android:textSize="12sp" android:textStyle="bold"/>
                                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tue" android:textColor="#666666" android:textSize="12sp"/>
                             </LinearLayout>
@@ -183,7 +210,6 @@
                         </LinearLayout>
                     </HorizontalScrollView>
 
-                    <!-- 3. AVAILABLE TIME SLOTS -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -193,42 +219,38 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="10dp" />
 
-                    <!-- Row 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginBottom="10dp">
 
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="8:00 AM" android:textColor="#333333" android:textSize="12sp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="9:00 AM" android:textColor="#333333" android:textSize="12sp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:background="@drawable/bg_card_selected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="10:00 AM" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/time1" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="8:00 AM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time2" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="9:00 AM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time3" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:background="@drawable/bg_card_selected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="10:00 AM" android:textColor="#FFFFFF" android:textSize="12sp" android:textStyle="bold"/>
                     </LinearLayout>
 
-                    <!-- Row 2 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginBottom="10dp">
 
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="11:00 AM" android:textColor="#333333" android:textSize="12sp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="1:00 PM" android:textColor="#333333" android:textSize="12sp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="2:00 PM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time4" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="11:00 AM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time5" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="1:00 PM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time6" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="2:00 PM" android:textColor="#333333" android:textSize="12sp"/>
                     </LinearLayout>
 
-                    <!-- Row 3 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:layout_marginBottom="20dp">
 
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="3:00 PM" android:textColor="#333333" android:textSize="12sp"/>
-                        <TextView android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="4:00 PM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time7" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="3:00 PM" android:textColor="#333333" android:textSize="12sp"/>
+                        <TextView android:id="@+id/time8" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:layout_marginEnd="8dp" android:background="@drawable/bg_card_unselected" android:clickable="true" android:focusable="true" android:gravity="center" android:text="4:00 PM" android:textColor="#333333" android:textSize="12sp"/>
                     </LinearLayout>
 
-                    <!-- 4. PURPOSE SECTION -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -267,7 +289,6 @@
 
                 </LinearLayout>
             </ScrollView>
-
 
             <LinearLayout
                 android:id="@+id/bottomActionContainer"

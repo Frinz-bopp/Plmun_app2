@@ -396,6 +396,7 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -422,6 +423,7 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -448,6 +450,7 @@
             android:layout_weight="1"
             android:clickable="true"
             android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:orientation="vertical">
 

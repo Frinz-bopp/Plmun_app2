@@ -5,6 +5,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_welcome);
 
-
         btnTabStudent = findViewById(R.id.btnTabStudent);
         btnTabFaculty = findViewById(R.id.btnTabFaculty);
         tvLoginTitle = findViewById(R.id.tvLoginTitle);
@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         btnCreateAccount = findViewById(R.id.btnCreateAccount);
 
-
         setTabActive(true);
-
 
         btnTabStudent.setOnClickListener(v -> {
             if (!btnTabStudent.isSelected()) {
@@ -44,25 +42,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         btnLogin.setOnClickListener(v -> {
-            getSupportFragmentManager().beginTransaction()
+            Fragment destinationFragment;
 
+            if (btnTabStudent.isSelected()) {
+                destinationFragment = new StudentDashboardFragment();
+            } else {
+                destinationFragment = new facultydashboard();
+            }
+
+            getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(
                             android.R.anim.fade_in,
                             android.R.anim.fade_out,
                             android.R.anim.fade_in,
                             android.R.anim.fade_out
                     )
-                    .replace(android.R.id.content, new StudentDashboardFragment())
+                    .replace(android.R.id.content, destinationFragment)
                     .addToBackStack(null)
                     .commit();
         });
 
-
         btnCreateAccount.setOnClickListener(v -> {
             getSupportFragmentManager().beginTransaction()
-
                     .setCustomAnimations(
                             android.R.anim.fade_in,
                             android.R.anim.fade_out,
