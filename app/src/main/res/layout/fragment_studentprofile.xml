@@ -8,19 +8,15 @@
     <RelativeLayout
         android:id="@+id/headerContainer"
         android:layout_width="match_parent"
-        android:layout_height="180dp">
+        android:layout_height="180dp"
+        android:background="#063A18">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="PLMUN Campus Building Background"
+            android:alpha="0.25"
             android:scaleType="centerCrop"
             android:src="@drawable/plmun_building" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#99063A18" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -161,7 +157,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="1dp"
-                                android:text="Computer Science"
+                                android:text="BS Computer Science"
                                 android:textColor="#757575"
                                 android:textSize="13sp" />
 

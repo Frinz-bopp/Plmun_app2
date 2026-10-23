@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -83,7 +82,17 @@ public class studentappointments extends Fragment {
         LinearLayout navProfile = view.findViewById(R.id.navProfile);
         if (navProfile != null) {
             navProfile.setOnClickListener(v -> {
-                Toast.makeText(requireContext(), "Profile clicked", Toast.LENGTH_SHORT).show();
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .setCustomAnimations(
+                                android.R.anim.fade_in,
+                                android.R.anim.fade_out,
+                                android.R.anim.fade_in,
+                                android.R.anim.fade_out
+                        )
+                        .replace(android.R.id.content, new studentprofile())
+                        .addToBackStack(null)
+                        .commit();
             });
         }
     }

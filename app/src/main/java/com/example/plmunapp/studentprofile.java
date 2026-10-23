@@ -64,6 +64,34 @@ public class studentprofile extends Fragment {
             });
         }
 
+        View menuPersonalInformation = view.findViewById(R.id.menuPersonalInformation);
+        if (menuPersonalInformation != null) {
+            menuPersonalInformation.setOnClickListener(v -> {
+                Toast.makeText(requireContext(), "Personal Information clicked", Toast.LENGTH_SHORT).show();
+            });
+        }
+
+        View menuChangePassword = view.findViewById(R.id.menuChangePassword);
+        if (menuChangePassword != null) {
+            menuChangePassword.setOnClickListener(v -> {
+                Toast.makeText(requireContext(), "Change Password clicked", Toast.LENGTH_SHORT).show();
+            });
+        }
+
+        View menuNotifications = view.findViewById(R.id.menuNotifications);
+        if (menuNotifications != null) {
+            menuNotifications.setOnClickListener(v -> {
+                Toast.makeText(requireContext(), "Notifications clicked", Toast.LENGTH_SHORT).show();
+            });
+        }
+
+        View menuHelpSupport = view.findViewById(R.id.menuHelpSupport);
+        if (menuHelpSupport != null) {
+            menuHelpSupport.setOnClickListener(v -> {
+                Toast.makeText(requireContext(), "Help & Support clicked", Toast.LENGTH_SHORT).show();
+            });
+        }
+
         View btnLogout = view.findViewById(R.id.menuLogout);
         if (btnLogout != null) {
             btnLogout.setOnClickListener(v -> {
